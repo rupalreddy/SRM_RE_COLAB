@@ -88,7 +88,7 @@ const Footer = () => {
               Contact
             </h3>
 
-            <div className="space-y-3 text-gray-400">
+            <div className="space-y-3 text-gray-300">
 
               <p>
                 SRM Institute of Science and Technology

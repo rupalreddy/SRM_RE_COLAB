@@ -19,22 +19,22 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-24 bg-gradient-to-r from-blue-700 to-indigo-800 text-white">
+    <section id="research" className="py-24 bg-gradient-to-r from-blue-950 via-blue-900 to-purple-950 text-white">
 
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto">
 
-          <p className="text-blue-200 font-semibold mb-4">
+          <p className="text-blue-300 font-semibold mb-4">
             Research Impact
           </p>
 
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight">
             Empowering Academic Innovation
           </h2>
 
-          <p className="mt-6 text-lg text-blue-100">
+          <p className="mt-6 text-lg text-gray-300 leading-relaxed">
             SRM RE-Colab creates a connected ecosystem
             for collaborative research and academic excellence.
           </p>
@@ -47,14 +47,26 @@ const StatsSection = () => {
           {stats.map((item, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 text-center hover:scale-105 transition duration-300"
+              className="
+                bg-white/5
+                backdrop-blur-xl
+                border border-white/10
+                rounded-3xl
+                p-8
+                text-center
+                hover:scale-105
+                hover:bg-white/10
+                transition-all
+                duration-300
+                shadow-xl
+              "
             >
 
-              <h3 className="text-5xl font-bold mb-4">
+              <h3 className="text-5xl font-bold mb-4 text-white">
                 {item.number}
               </h3>
 
-              <p className="text-blue-100 text-lg">
+              <p className="text-gray-300 text-lg">
                 {item.title}
               </p>
 

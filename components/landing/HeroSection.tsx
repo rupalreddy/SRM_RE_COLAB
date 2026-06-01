@@ -1,8 +1,11 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white">
+    <section id="home" className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white dark:from-zinc-950 dark:to-black transition-colors duration-300">
 
       {/* Background Blur Effects */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300/30 rounded-full blur-3xl" />
@@ -14,13 +17,17 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* Left Content */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+>
 
             <p className="text-blue-600 font-semibold mb-4">
               Research Collaboration Platform
             </p>
 
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900 dark:text-white">
               Connect Researchers,
               <span className="text-blue-700">
                 {" "}Publish Ideas,
@@ -28,7 +35,7 @@ const HeroSection = () => {
               Collaborate Smarter
             </h1>
 
-            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+            <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               SRM RE-Colab helps faculties and research scholars
               collaborate on innovative research projects,
               publish papers, and communicate seamlessly.
@@ -47,17 +54,22 @@ const HeroSection = () => {
 
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Right Side Card */}
-          <div className="relative">
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
 
-            <div className="bg-white rounded-3xl shadow-2xl p-8 border">
+            <div className="bg-white dark:bg-zinc-900 rounded-3xl shadow-2xl p-8 border border-gray-200 dark:border-zinc-700">
 
               <div className="space-y-6">
 
                 {/* Card 1 */}
-                <div className="p-4 rounded-2xl bg-blue-50 border">
+                <div className="p-4 rounded-2xl bg-blue-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
                   <h3 className="font-semibold text-lg">
                     AI Research Collaboration
                   </h3>
@@ -69,7 +81,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Card 2 */}
-                <div className="p-4 rounded-2xl bg-purple-50 border">
+                <div className="p-4 rounded-2xl bg-purple-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
                   <h3 className="font-semibold text-lg">
                     Smart Meeting Detection
                   </h3>
@@ -81,12 +93,12 @@ const HeroSection = () => {
                 </div>
 
                 {/* Card 3 */}
-                <div className="p-4 rounded-2xl bg-green-50 border">
+                <div className="p-4 rounded-2xl bg-green-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700">
                   <h3 className="font-semibold text-lg">
                     Real-time Collaboration
                   </h3>
 
-                  <p className="text-sm text-gray-600 mt-2">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
                     Dedicated collaboration rooms for
                     research teams with instant communication.
                   </p>
@@ -96,7 +108,7 @@ const HeroSection = () => {
 
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 

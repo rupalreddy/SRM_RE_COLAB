@@ -129,3 +129,12 @@
     @apply font-sans;
   }
 }
+
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  @apply bg-white text-black dark:bg-black dark:text-white;
+}
+

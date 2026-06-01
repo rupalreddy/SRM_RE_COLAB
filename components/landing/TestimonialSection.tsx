@@ -1,3 +1,6 @@
+import SectionTitle from "@/components/shared/SectionTitle";
+
+
 const testimonials = [
   {
     name: "Dr. Rajesh Kumar",
@@ -21,27 +24,16 @@ const testimonials = [
 
 const TestimonialSection = () => {
   return (
-    <section className="py-24 bg-gray-50">
+    <section id="collaboration" className="py-24 bg-gray-50 dark:bg-zinc-950 transition-colors duration-300">
 
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <div className="text-center max-w-3xl mx-auto">
-
-          <p className="text-blue-600 font-semibold mb-4">
-            Testimonials
-          </p>
-
-          <h2 className="text-4xl font-bold text-gray-900">
-            What Researchers Say
-          </h2>
-
-          <p className="mt-6 text-lg text-gray-600">
-            Hear from faculties and scholars using SRM RE-Colab
-            for modern academic collaboration.
-          </p>
-
-        </div>
+        <SectionTitle
+          badge="Testimonials"
+          title="What Researchers Say"
+          description="Hear from faculties and scholars using SRM RE-Colab for modern academic collaboration."
+        />
 
         {/* Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
@@ -49,7 +41,7 @@ const TestimonialSection = () => {
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-3xl border p-8 shadow-sm hover:shadow-2xl transition duration-300 hover:-translate-y-2"
+              className="bg-white dark:bg-zinc-900 rounded-3xl border p-8 shadow-sm hover:shadow-2xl transition duration-300 hover:-translate-y-2"
             >
 
               {/* Avatar */}
@@ -58,13 +50,13 @@ const TestimonialSection = () => {
               </div>
 
               {/* Message */}
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 "{item.message}"
               </p>
 
               {/* User */}
               <div>
-                <h3 className="font-semibold text-lg">
+                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
                   {item.name}
                 </h3>
 
